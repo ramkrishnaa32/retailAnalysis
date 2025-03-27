@@ -1,0 +1,16 @@
+Retail Analysis - Project Structure
+    - configs
+        - application.conf (keep project level configuration)
+        - pyspark.conf (spark level configuration, executor cores, memory)
+    - lib
+        - ConfigReader.py (Read the config files)
+        - DataReader.py (Read dataframes)
+        - DataManipulation.py (spark transformation)
+        - Utils.py (spark session)
+    - data
+        - orders.csv
+        - customers.csv
+    - application_main.py (Entry point for the application)
+    - Pipfile
+    - Pipfile.lock
+

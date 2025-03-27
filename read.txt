@@ -1,0 +1,19 @@
+To activate the enviroment - pipenv shell
+installation - pipenv install pytest
+install for specific env - pipenv install pytest --dev
+uninstall - pipenv uninstall pytest
+To change the version - Change the specific version in Pipfile, then remove the virtula env, them re-create the virtual enviroment
+Reomoving virtualenv - pipenv --rm
+install based on pipfile - pipenv install 
+
+------------------------------
+
+Retail Analysis: dataset
+    - orders
+    - customers
+
+Problem statement:
+    - Filter the data with order status "CLOSED"
+    - Join based customer id
+    - Aggregate the orders based on state lebel
+
