@@ -14,3 +14,6 @@ Retail Analysis - Project Structure
     - Pipfile
     - Pipfile.lock
 
+    - Run
+        - Initiate the pipenv (pipenv shell)
+        - python3 main.py LOCAL (To run the project)
