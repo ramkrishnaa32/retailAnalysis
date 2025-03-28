@@ -11,3 +11,5 @@ Scenarious:
 Run testcases
     - python -m pytest
     - python -m pytest -v
+    - python -m pytest --fixtures (See all the fixtures)
+    - python -m pytest -m transformation -v (Running testcases under specific market)

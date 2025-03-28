@@ -17,3 +17,17 @@ Problem statement:
     - Join based customer id
     - Aggregate the orders based on state lebel
 
+---------------------------------
+pip vitual env
+project folder - cd /Users/kramkrishnaachary/Learning/data_engineering/retailAnalysis
+python -m venv venv -  Create a Virtual Environment
+source venv/bin/activate - Activate the Virtual Environment
+pip install -r requirements.txt
+pip list -  Verify Installation
+deactivate - deactivate the virtual environment:
+
+To remove and re-create:
+rm -rf venv
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt

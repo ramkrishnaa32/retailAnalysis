@@ -29,6 +29,6 @@ if __name__ == '__main__':
     aggregated_results = DataManipulation.count_orders_by_state(joined_df)
     
     # Display results
-    aggregated_results.show(10, truncate = False)
+    aggregated_results.show(truncate = False)
 
     print(f"Completed")

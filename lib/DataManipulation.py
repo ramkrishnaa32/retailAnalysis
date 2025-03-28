@@ -14,3 +14,8 @@ def join_orders_customers(orders_df, customers_df):
 def count_orders_by_state(joined_df):
     df = joined_df.groupBy('state').count()
     return df
+
+# Filter orders sattus
+def filter_orders(orders_df, status):
+    df = orders_df.filter("order_status = '{}'".format(status))
+    return df
