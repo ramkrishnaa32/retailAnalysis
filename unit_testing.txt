@@ -1,0 +1,13 @@
+Testing framework
+    - unittest
+    - pytest
+
+Scenarious:
+    - Read customers data (records 12435)
+    - Read orders data (records 68883)
+    - Filter closed orders (records 7556)
+    - get_app_config
+
+Run testcases
+    - python -m pytest
+    - python -m pytest -v
