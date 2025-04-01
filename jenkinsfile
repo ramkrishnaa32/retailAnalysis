@@ -35,7 +35,7 @@ pipeline {
                     sh 'echo $PATH'
                     
                     // Run tests (assuming you are using pytest for tests)
-                    sh './retail_pipeline_venv/bin/pipenv run pytest'
+                    sh './retail_pipeline_venv/bin/pipenv run pytest -v'
                 }
             }
         }
@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Add deployment steps here (e.g., deploy to a server or cloud)
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv012419/retailproject'
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv016422/retailproject'
             }
         }
     }
