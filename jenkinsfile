@@ -22,6 +22,7 @@ pipeline {
             steps {
                 script {
                     // Install your project dependencies (e.g., requirements.txt or Pipfile)
+                    sh './retail_pipeline_venv/bin/pipenv --python /usr/bin/python3.11'
                     sh './retail_pipeline_venv/bin/pipenv install'
                 }
             }
