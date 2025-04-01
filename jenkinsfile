@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    
     environment {
         LABS = credentials('labcreds')
         JAVA_HOME = '/opt/bitnami/java'  // Set your JAVA_HOME path here.
