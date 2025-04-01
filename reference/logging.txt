@@ -1,0 +1,10 @@
+log4j, different logging level
+    - debug
+    - info
+    - warn
+    - error
+    - fatal
+
+filename - log4j.properties
+target location - log messages to be printed, console or file
+message format - text
