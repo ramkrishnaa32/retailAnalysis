@@ -1,8 +1,7 @@
 pipeline {
     agent any
-    
     environment {
-        LABS = credentials('labcreds')
+        LABS = credentials("labcreds")
         JAVA_HOME = '/opt/bitnami/java'  // Set your JAVA_HOME path here.
         PATH = "${env.JAVA_HOME}/bin:${env.PATH}"  // Add Java binaries to PATH
     }
@@ -23,6 +22,7 @@ pipeline {
             steps {
                 script {
                     // Install your project dependencies (e.g., requirements.txt or Pipfile)
+                    sh './retail_pipeline_venv/bin/pipenv --python /usr/bin/python3.11'
                     sh './retail_pipeline_venv/bin/pipenv install'
                 }
             }
@@ -35,7 +35,7 @@ pipeline {
                     sh 'echo $PATH'
                     
                     // Run tests (assuming you are using pytest for tests)
-                    sh './retail_pipeline_venv/bin/pipenv run pytest'
+                    sh './retail_pipeline_venv/bin/pipenv run pytest -v'
                 }
             }
         }
@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Add deployment steps here (e.g., deploy to a server or cloud)
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv012419/retailproject'
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv016422/retailproject'
             }
         }
     }
